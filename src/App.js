@@ -14,9 +14,11 @@ function App() {
 	const [cart, setCart] = useState([]);
 	
 	const addItem = item => {
-		setCart([...cart, item])
+		setCart([...cart, item]);
 		// add the given item to the cart
+		
 	};
+	
 
 	return (
 		
@@ -26,17 +28,8 @@ function App() {
 					<Navigation />
 
 			{/* Routes */}
-					<Route
-						exact
-						path="/"
-						component={Products}
-					/>
-				
-
-					<Route
-						path="/cart"
-						components={ShoppingCart}
-					/>
+					<Route exact path="/" component={Products} />
+					<Route path="/cart" component={ShoppingCart}/>
 				
 		  	  	</CartContext.Provider>
 		  	</ProductContext.Provider>
