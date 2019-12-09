@@ -6,7 +6,7 @@ import { CartContext } from '../contexts/CartContext';
 
 
 const ShoppingCart = () => {
-	const getCartTotal = () => {
+	const getCartTotal = () => {		
 		return cart.reduce((acc, value) => {
 			return acc + value.price;
 		}, 0).toFixed(2);
